@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="104dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sayi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="sayi1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/sayi2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="sayi2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <Button
+        android:id="@+id/topla"
+        android:layout_width="61dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clicked"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayi2" />
+
+    <Button
+        android:id="@+id/cikart"
+        android:layout_width="61dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clicked"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayi2" />
+
+    <Button
+        android:id="@+id/bolme"
+        android:layout_width="61dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clicked"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayi2" />
+
+    <Button
+        android:id="@+id/carpma"
+        android:layout_width="61dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clicked"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayi2" />
+
+    <TextView
+        android:id="@+id/sonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:text="Sonuc: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cikart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
